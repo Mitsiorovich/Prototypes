@@ -5,7 +5,7 @@ const requests = [
     { userId: '550e8400-e29b-41d4-a716-446655440002', username: 'sam_smith' },
 ];
 
-var serverEndpoint = "http://64.226.107.81"//64.226.107.81
+var serverEndpoint = "https://prototypes-h9jf.onrender.com"//
 
 async function generateRequestRows() {
     const requestList = document.getElementById('request-list');
