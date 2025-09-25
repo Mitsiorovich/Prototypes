@@ -9,7 +9,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const mongoURI = process.env.MONGODB_URI;
 
@@ -41,4 +41,4 @@ app.get('/adminPortal', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/login.html')); 
 });
 
-app.listen(port, () => console.log('Server started'));
+app.listen(port, () => console.log(`Server started on port ${port}`));
